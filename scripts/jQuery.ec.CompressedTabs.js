@@ -3,7 +3,7 @@
 
 (function ($) {
     'use strict';
-    $.widget("carolina.compressedTabs", $.ui.tabs, {
+    $.widget("ec.compressedTabs", $.ui.tabs, {
         _create: function () {
             this.element
                 .addClass('ui-tabs-compressed');
