@@ -1,0 +1,80 @@
+.ui-tabs.ui-tabs-compressed {
+  font-size: 100%;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap {
+  display: table;
+  height: 1.25em;
+  vertical-align: middle;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-trigger {
+  position: relative;
+  padding: 0.125em 0;
+  width: 0.7em;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-trigger .ui-tabs-compressed-left {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -0.35em;
+  border-top: 0.35em solid transparent;
+  border-bottom: 0.35em solid transparent;
+  border-right: 0.525em solid #222222;
+  cursor: pointer;
+  left: 0;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-trigger {
+  position: relative;
+  padding: 0.125em 0;
+  width: 0.7em;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-trigger .ui-tabs-compressed-right {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -0.35em;
+  border-top: 0.35em solid transparent;
+  border-bottom: 0.35em solid transparent;
+  border-left: 0.525em solid #222222;
+  cursor: pointer;
+  right: 0;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap > * {
+  display: table-cell;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-nav-wrap {
+  display: table-cell;
+  height: 1.25em;
+  overflow: hidden;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-nav-wrap ul.ui-tabs-nav {
+  width: 5em;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-nav-wrap ul.ui-tabs-nav li {
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  height: 1.25em;
+  border: none;
+  float: none;
+  font-size: 1em;
+  margin: 0;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-nav-wrap ul.ui-tabs-nav li .ui-tabs-anchor {
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  font-size: 1em;
+  padding: 0;
+}
+.ui-tabs.ui-tabs-compressed .ui-tabs-compressed-wrap .ui-tabs-compressed-nav-wrap ul.ui-tabs-nav li .ui-tabs-anchor:focus {
+  outline: none;
+  border: none;
+}

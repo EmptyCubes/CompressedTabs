@@ -1,0 +1,73 @@
+@import "Triangle";
+
+@triggerColor: #222;
+@triggerSize: 0.35em;
+@tabHeight: 1.25em;
+@defaultWindowSize: 5em;
+
+.trigger(@direction) {
+  .ui-tabs-compressed-trigger {
+    position: relative;
+    padding: 0.125em 0;
+    width: @triggerSize*2;
+
+    .ui-tabs-compressed-@{direction} {
+      .triangle(@direction, @triggerSize, @triggerColor);
+      cursor: pointer;
+      & when (@direction = left)  { left: 0; }
+      & when (@direction = right) { right: 0; }
+    }
+  }
+}
+
+.ui-tabs.ui-tabs-compressed {
+  font-size: 100%;
+
+  .ui-tabs-compressed-wrap {
+    display: table;
+    height: @tabHeight;
+    vertical-align: middle;
+    .trigger(left);
+    .trigger(right);
+
+    > * { display: table-cell; }
+
+    .ui-tabs-compressed-nav-wrap {
+      display: table-cell;
+      height: @tabHeight;
+      overflow: hidden;
+
+      ul.ui-tabs-nav {
+        width: @defaultWindowSize;
+        white-space: nowrap;
+        background: transparent;
+        border: none;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          position: relative;
+          background: transparent;
+          height: @tabHeight;
+          border: none;
+          float: none;
+          font-size: 1em;
+          margin: 0;
+
+          .ui-tabs-anchor {
+            box-sizing: border-box;
+            position: relative;
+            height: 100%;
+            font-size: 1em;
+            padding: 0;
+
+            &:focus {
+              outline: none;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

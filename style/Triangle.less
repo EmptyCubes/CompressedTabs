@@ -1,0 +1,36 @@
+﻿.triangle-base(@size) {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -@size;
+}
+
+.triangle(@direction, @size, @color) when (@direction = up) {
+  .triangle-base(@size);
+  border-left: @size solid transparent;
+  border-right: @size solid transparent;
+  border-bottom: @size+@size/2 solid @color;
+}
+
+.triangle(@direction, @size, @color) when (@direction = down) {
+  .triangle-base(@size);
+  border-left: @size solid transparent;
+  border-right: @size solid transparent;
+  border-top: @size+@size/2 solid @color;
+}
+
+.triangle(@direction, @size, @color) when (@direction = left) {
+  .triangle-base(@size);
+  border-top: @size solid transparent;
+  border-bottom: @size solid transparent;
+  border-right: @size+@size/2 solid @color;
+}
+
+.triangle(@direction, @size, @color) when (@direction = right) {
+  .triangle-base(@size);
+  border-top: @size solid transparent;
+  border-bottom: @size solid transparent;
+  border-left: @size+@size/2 solid @color;
+}
